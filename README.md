@@ -1,1 +1,1 @@
-0.1 version of mobidziennik on pc
+0.14 version of mobidziennik on pc

@@ -13,6 +13,11 @@ public class DataBaseUtils {
         int userId = getIntFromDatabase(sql);
         return userId;
     }
+    String getUserName(int Admin_id) {
+        String sql = "Select User from administrators where Admin_id=" + Admin_id + " ";
+        String UserName = getStringFromDatabase(sql);
+        return UserName;
+    }
     String getPassword(String AdminUser) {
         String sql = "Select Password from administrators where User=\"" + AdminUser + "\" ";
         String password = getStringFromDatabase(sql);

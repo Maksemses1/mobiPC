@@ -9,10 +9,12 @@ public class UserFactory {
     }
     public  User createUser(int idUser) {
         switch (getUserType(idUser)){
-            case "TEACHER":
-                return new Admin(idUser);
             case "STUDENT":
                 return new Student(idUser);
+            case "TEACHER":
+                return new Teacher(idUser);
+            case "ADMIN":
+                return new Admin(idUser);
             default:
                 return null;
         }

@@ -7,4 +7,8 @@ public class Student extends User {
         super(id);
     }
 
+    @Override
+    public String toString() {
+        return "Student";
+    }
 }

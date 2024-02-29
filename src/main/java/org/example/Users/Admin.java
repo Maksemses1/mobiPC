@@ -5,4 +5,9 @@ public class Admin extends User {
     public Admin(int id) {
         super(id);
     }
+
+    @Override
+    public String toString() {
+        return "Admin";
+    }
 }

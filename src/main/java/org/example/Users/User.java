@@ -21,6 +21,7 @@ public abstract class User extends Object {
         this.email = utils.getEmail(this.id);
         this.password = utils.getPassword(this.id);
     }
+
     public String getUser(){
         return user;
     };

@@ -2,8 +2,8 @@ package org.example.Users;
 
 import org.example.DataBaseUtils;
 
-public abstract class User extends Object {
-    private int id;
+public abstract class User {
+    private final int id;
     private String user = null;
     private int age = -1;
     private String gender = null;
@@ -24,16 +24,17 @@ public abstract class User extends Object {
 
     public String getUser(){
         return user;
-    };
+    }
+
     public int getAge(){
         return age;
-    };
+    }
     public String getGender(){
         return gender;
     }
     public String getEmail(){
         return email;
-    };
+    }
     public String getPassword(){
         return password;
     }

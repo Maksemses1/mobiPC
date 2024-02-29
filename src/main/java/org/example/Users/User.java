@@ -2,7 +2,7 @@ package org.example.Users;
 
 import org.example.DataBaseUtils;
 
-public abstract class User {
+public abstract class User extends Object {
     private int id;
     private String user = null;
     private int age = -1;

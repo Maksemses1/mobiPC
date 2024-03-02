@@ -3,7 +3,7 @@ package org.example;
 import org.example.Users.*;
 
 public class UserFactory {
-    DataBaseUtils utils = new DataBaseUtils();
+    DataBaseGetters utils = new DataBaseGetters();
     String getUserType(int idUser) {
         return utils.getUserType(idUser);
     }

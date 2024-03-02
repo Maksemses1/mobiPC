@@ -5,10 +5,12 @@ import org.example.Users.*;
 public class App
 {
     public static void main( String[] args ) {
-        DataBaseUtils utils = new DataBaseUtils();
-        UserFactory userFactory = new UserFactory();
-        User user = userFactory.createUser(2);
-        System.out.println(utils.getUserType(2));
+        //DataBaseGetters utils = new DataBaseGetters();
+        //DataBaseInserter dataBaseInserter = new DataBaseInserter();
+        //UserFactory userFactory = new UserFactory();
+        //dataBaseInserter.insertUser(new Student("John", 20, "Male", "kenaa@xample.com", "123", "TEACHER"));
+        /*User user = userFactory.createUser(3);
+        System.out.println(utils.getUserType(3));
         System.out.println(user.getUser() + "\n" +
                 user.getAge() + "\n" +
                 user.getEmail() + "\n" +
@@ -16,7 +18,7 @@ public class App
                 user.getPassword() + "\n" +
                 user.getId() + "\n" +
                 user + "\n");
-
+*/
 
     }
 }

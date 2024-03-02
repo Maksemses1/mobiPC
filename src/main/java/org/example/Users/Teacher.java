@@ -9,6 +9,6 @@ public class Teacher extends User {
 
     @Override
     public String toString() {
-        return "Teacher";
+        return "TEACHER";
     }
 }

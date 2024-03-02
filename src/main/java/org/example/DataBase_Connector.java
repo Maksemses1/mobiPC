@@ -4,14 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class JDBS_Connect {
+public class DataBase_Connector {
     private final String URL = "jdbc:mysql://localhost:3306/mobi";
     private final String USER = "root";
     private final String PASSWORD = "123q";
     private Connection conn;
-    public JDBS_Connect(){
-
-    }
 
     public Connection Connection() {
         try {

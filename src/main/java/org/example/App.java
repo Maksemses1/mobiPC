@@ -6,9 +6,16 @@ public class App
 {
     public static void main( String[] args ) {
         DataBaseUtils utils = new DataBaseUtils();
-        Admin admin = new Admin("maksym", 16, "male", "123@gmail.com", "123456789", 1);
-        System.out.println(utils.getPassword("Maksym"));
-        System.out.println(admin.getAdmin_id());
+        UserFactory userFactory = new UserFactory();
+        User user = userFactory.createUser(2);
+        System.out.println(utils.getUserType(2));
+        System.out.println(user.getUser() + "\n" +
+                user.getAge() + "\n" +
+                user.getEmail() + "\n" +
+                user.getGender() + "\n" +
+                user.getPassword() + "\n" +
+                user.getId() + "\n" +
+                user + "\n");
 
 
     }

@@ -1,7 +1,7 @@
 package org.example;
 
 public class DataBaseUtils {
-    DBrequests dbrequests = new DBrequests();
+    private DBRequests dbrequests = new DBRequests();
     private int getIntFromDatabase(String sql){
         return dbrequests.getIntFromRequest(sql);
     }

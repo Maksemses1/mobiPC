@@ -2,7 +2,7 @@ package org.example;
 
 import java.sql.*;
 
-public class DBrequests extends JDBS_Connect {
+public class DBRequests extends DataBase_Connector {
 
     private ResultSet getResultSet(String sql) throws SQLException {
         Connection conn = Connection();

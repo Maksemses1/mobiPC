@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DataBase_Connector {
-    private final String URL = "jdbc:mysql://localhost:3306/mobi";
-    private final String USER = "root";
-    private final String PASSWORD = "123q";
+    private final String URL = "jdbc:postgresql://mobicluster-13902.8nj.gcp-europe-west1.cockroachlabs.cloud:26257/mobidb";
+    private final String USER = "root1";
+    private final String PASSWORD = "lBXxR60GHsyUmY3ng__ZZA";
     private Connection connection;
 
     public Connection Connection() {

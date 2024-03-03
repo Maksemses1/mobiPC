@@ -1,12 +1,11 @@
 package org.example;
 
-public class DataBaseGetters {
-    private DBRequests dbrequests = new DBRequests();
+public class DataBaseGetters extends DBRequests{
     private int getIntFromDatabase(String sql){
-        return dbrequests.getIntFromRequest(sql);
+        return getIntFromRequest(sql);
     }
     private String getStringFromDatabase(String sql){
-        return dbrequests.getStringFromRequest(sql);
+        return getStringFromRequest(sql);
     }
     int getId(String User) {
         String sql = "SELECT id FROM users WHERE \"user\" = '" + User + "' ";

@@ -22,7 +22,7 @@ public class DBRequests extends DataBase_Connector {
             rs.next();
             Int = rs.getInt(1);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            return Int;
         }
         closeConnection();
         return Int;

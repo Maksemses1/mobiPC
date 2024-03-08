@@ -1,11 +1,17 @@
 package org.example;
 
+import org.springframework.stereotype.Component;
+
+@Component("getter")
 public class DataBaseGetters extends DBRequests{
     private int getIntFromDatabase(String sql){
         return getIntFromRequest(sql);
     }
     private String getStringFromDatabase(String sql){
         return getStringFromRequest(sql);
+    }
+    public DataBaseGetters(){
+        System.out.println("getter init");
     }
     int getId(String User) {
         String sql = "SELECT id FROM users WHERE \"user\" = '" + User + "' ";

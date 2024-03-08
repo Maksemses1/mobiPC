@@ -1,6 +1,7 @@
 package org.example.Users;
 
 import org.example.DataBaseGetters;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public abstract class User {
     private int id;
@@ -23,12 +24,14 @@ public abstract class User {
         this.userType = userType;
     }
     void init(){
-        DataBaseGetters utils = new DataBaseGetters();
-        this.user = utils.getUserName(this.id);
-        this.age = utils.getAge(this.id);
-        this.gender = utils.getGender(this.id);
-        this.email = utils.getEmail(this.id);
-        this.password = utils.getPassword(this.id);
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        DataBaseGetters getter = context.getBean("getter", DataBaseGetters.class);
+        this.user = getter.getUserName(this.id);
+        this.age = getter.getAge(this.id);
+        this.gender = getter.getGender(this.id);
+        this.email = getter.getEmail(this.id);
+        this.password = getter.getPassword(this.id);
+        context.close();
     }
 
     public String getUser(){

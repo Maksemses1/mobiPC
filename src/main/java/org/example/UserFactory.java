@@ -1,11 +1,19 @@
 package org.example;
 
 import org.example.Users.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component("userFactory")
 public class UserFactory {
-    DataBaseGetters utils = new DataBaseGetters();
+    private final DataBaseGetters getter;
+    @Autowired
+    UserFactory(DataBaseGetters getter){
+        this.getter = getter;
+        System.out.println("UserFactory init");
+    }
     String getUserType(int idUser) {
-        return utils.getUserType(idUser);
+        return getter.getUserType(idUser);
     }
     public  User createUser(int idUser) {
         switch (getUserType(idUser)){

@@ -1,15 +1,18 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component("getter")
 public class DataBaseGetters extends DBRequests{
+
     private int getIntFromDatabase(String sql){
         return getIntFromRequest(sql);
     }
     private String getStringFromDatabase(String sql){
         return getStringFromRequest(sql);
     }
+    @Autowired
     public DataBaseGetters(){
         System.out.println("getter init");
     }

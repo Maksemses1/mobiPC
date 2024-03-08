@@ -10,9 +10,9 @@ public class App
 
         DataBaseGetters getter = context.getBean("getter", DataBaseGetters.class);
         DataBaseInserter dataBaseInserter = context.getBean("inserter", DataBaseInserter.class);
-        UserFactory userFactory = context.getBean("userFactory", UserFactory.class);
-        UserValidator userValidator = context.getBean("userValidator", UserValidator.class);
-        //dataBaseInserter.insertUser(new Student("John", 20, "Male", "kenaa@xample.com", "123", "TEACHER"));
+        //UserFactory userFactory = context.getBean("userFactory", UserFactory.class);
+        //UserValidator userValidator = context.getBean("userValidator", UserValidator.class);
+        dataBaseInserter.insertUser(new Student("John", 20, "Male", "kenaa@xample.com", "123", "TEACHER"));
         /*User user = userFactory.createUser(3);
         System.out.println(utils.getUserType(3));
         System.out.println(user.getUser() + "\n" +

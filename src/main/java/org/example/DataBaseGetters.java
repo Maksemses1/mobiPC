@@ -12,7 +12,7 @@ public class DataBaseGetters extends DBRequests{
     private String getStringFromDatabase(String sql){
         return getStringFromRequest(sql);
     }
-    @Autowired
+
     public DataBaseGetters(){
         System.out.println("getter init");
     }

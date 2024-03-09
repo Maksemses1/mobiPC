@@ -1,10 +1,10 @@
 package org.example.Users;
 
-public class Admin extends User {
+import org.example.Users.User;
+import org.springframework.stereotype.Component;
 
-    public Admin(int id) {
-        super(id);
-    }
+@Component("admin")
+public class Admin extends User {
 
     @Override
     public String toString() {

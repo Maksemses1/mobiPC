@@ -1,19 +1,26 @@
 package org.example.Users;
 
 import org.example.DataBaseGetters;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component("user")
 public abstract class User {
     private int id;
+
+    @Autowired
+    private DataBaseGetters getter;
     private String user = null;
     private int age = -1;
     private String gender = null;
     private String email = null;
     private String password = "";
     private String userType = null;
-    public User(int idUser){
-        this.id = idUser;
-        init();
+
+
+    public User(){
     }
     public User(String user, int age, String gender, String email, String password, String userType){
         this.user = user;
@@ -23,17 +30,19 @@ public abstract class User {
         this.password = password;
         this.userType = userType;
     }
-    void init(){
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        DataBaseGetters getter = context.getBean("getter", DataBaseGetters.class);
+
+
+    public void init(){
         this.user = getter.getUserName(this.id);
         this.age = getter.getAge(this.id);
         this.gender = getter.getGender(this.id);
         this.email = getter.getEmail(this.id);
         this.password = getter.getPassword(this.id);
-        context.close();
     }
 
+    public void setId(int id){
+        this.id = id;
+    }
     public String getUser(){
         return user;
     }
@@ -53,8 +62,8 @@ public abstract class User {
     public int getId(){
         return id;
     }
-
     public String getUserType() {
         return userType;
     }
+
 }

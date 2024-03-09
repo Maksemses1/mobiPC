@@ -1,7 +1,5 @@
 package org.example;
 
-import org.example.Users.User;
-
 import java.sql.*;
 
 public class DBRequests extends DataBase_Connector {

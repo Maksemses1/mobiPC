@@ -5,11 +5,10 @@ import org.springframework.stereotype.Component;
 
 @Component("userValidator")
 public class UserValidator extends DBRequests{
-    private final DataBaseGetters getter;
-
     @Autowired
-    UserValidator(DataBaseGetters getter){
-        this.getter = getter;
+    private DataBaseGetters getter;
+
+    UserValidator(){
         System.out.println("UserValidator init");
     }
 

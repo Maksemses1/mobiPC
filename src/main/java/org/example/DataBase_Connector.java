@@ -17,7 +17,6 @@ public class DataBase_Connector {
     private String PASSWORD;
     private Connection connection;
 
-
     public Connection Connection() {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);

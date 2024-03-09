@@ -1,11 +1,12 @@
-package org.example;
+package org.example.JDBC_utils;
 
+import org.example.DBRequests;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("getter")
-public class DataBaseGetters extends DBRequests{
+public class DataBaseGetters extends DBRequests {
 
     private int getIntFromDatabase(String sql){
         return getIntFromRequest(sql);
@@ -17,7 +18,7 @@ public class DataBaseGetters extends DBRequests{
     public DataBaseGetters(){
         System.out.println("getter init");
     }
-    int getId(String User) {
+    public int getId(String User) {
         String sql = "SELECT id FROM users WHERE \"user\" = '" + User + "' ";
         int userId = getIntFromDatabase(sql);
         return userId;
@@ -52,7 +53,7 @@ public class DataBaseGetters extends DBRequests{
         String email = getStringFromDatabase(sql);
         return email;
     }
-    String getUserType(int id) {
+    public String getUserType(int id) {
         String sql = "SELECT usertype FROM users WHERE \"id\"=" + id + " ";
         String UserType = getStringFromDatabase(sql);
         return UserType;

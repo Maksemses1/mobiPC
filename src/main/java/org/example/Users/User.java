@@ -1,9 +1,8 @@
 package org.example.Users;
 
-import org.example.DataBaseGetters;
+import org.example.JDBC_utils.DataBaseGetters;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("user")

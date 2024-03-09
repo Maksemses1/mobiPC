@@ -1,10 +1,11 @@
-package org.example;
+package org.example.JDBC_utils;
 
+import org.example.DBRequests;
 import org.example.Users.User;
 import org.springframework.stereotype.Component;
 
 @Component("inserter")
-public class DataBaseInserter extends DBRequests{
+public class DataBaseInserter extends DBRequests {
 
     DataBaseInserter(){
         System.out.println("Inserter init");
@@ -24,5 +25,5 @@ public class DataBaseInserter extends DBRequests{
     public void insertUser(User user) {
         String sql = CreateInsertUserString(user);
         insertRequest(sql);
-    };
+    }
 }

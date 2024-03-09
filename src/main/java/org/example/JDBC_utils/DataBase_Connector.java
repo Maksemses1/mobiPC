@@ -1,4 +1,4 @@
-package org.example;
+package org.example.JDBC_utils;
 
 import org.springframework.beans.factory.annotation.Value;
 

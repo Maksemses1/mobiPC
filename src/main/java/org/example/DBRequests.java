@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.JDBC_utils.DataBase_Connector;
+
 import java.sql.*;
 
 public class DBRequests extends DataBase_Connector {
@@ -13,7 +15,7 @@ public class DBRequests extends DataBase_Connector {
         resultSet = stmt.getResultSet();
         return resultSet;
     }
-    int getIntFromRequest(String sql) {
+    protected int getIntFromRequest(String sql) {
         int Int = 0;
         try {
             ResultSet rs = getResultSet(sql);
@@ -25,7 +27,7 @@ public class DBRequests extends DataBase_Connector {
         closeConnection();
         return Int;
     }
-    String getStringFromRequest(String sql) {
+    protected String getStringFromRequest(String sql) {
         String String = null;
         try {
             ResultSet rs = getResultSet(sql);
@@ -46,7 +48,7 @@ public class DBRequests extends DataBase_Connector {
         }
         return stmt;
     }
-    void insertRequest(String sql){
+    protected void insertRequest(String sql){
         try {
             connection = Connection();
             PreparedStatement stmt = CreateStatement(sql);

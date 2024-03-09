@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.JDBC_utils.DataBaseGetters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

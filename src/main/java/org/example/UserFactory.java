@@ -1,12 +1,11 @@
 package org.example;
 
-import org.example.Config.MyConfig;
+import org.example.JDBC_utils.DataBaseGetters;
 import org.example.Users.Admin;
 import org.example.Users.Student;
 import org.example.Users.Teacher;
 import org.example.Users.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
 @Component("userFactory")
